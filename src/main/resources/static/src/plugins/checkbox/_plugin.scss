@@ -1,0 +1,15 @@
+// Get the checkbox definition
+@import 'class';
+
+// Define it for the element checkbox
+[type=checkbox] {
+  @extend %radio;
+  @extend %checkbox;
+  }
+
+.mainButton {
+  font-size: 110.5em;
+}
+.shyButton {
+  font-size: .75em;
+}
