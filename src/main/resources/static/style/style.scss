@@ -13,10 +13,10 @@ $picnic-normalize-ie: false;
 @import "font/fontello";
 
 // Imports the base variable styles
-@import "../../src/themes/default/theme";
+@import "../src/themes/default/theme";
 
 // Normalize.css (external library)
-@import "../../src/picnic";
+@import "../src/picnic.css";
 
 // // Generic styles for things like <body>, <a> and others
 // // It also overwrites normalize.css a bit
