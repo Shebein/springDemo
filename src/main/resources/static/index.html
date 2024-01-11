@@ -5,9 +5,10 @@
     <title>my window</title>
     <link rel="stylesheet" type="text/css" href="/src/picnic.css">
     <link rel="stylesheet" type="text/css" href="/src/picnic.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
-<a class="pseudo button" href="/documentation.html" target="_blank" ><h3>css 样式指南</h3></a>
+<a class="pseudo button" href="/documentation.html" target="_blank"><h3>css 样式指南</h3></a>
 
 <div class="flex two">
     <div>
@@ -29,5 +30,67 @@
         </article>
     </div>
 </div>
+<div class="third">
+    <input class="stack" placeholder="Name" id="movieName"/>
+    <input class="stack" placeholder="Email" id="movieYear"/>
+    <button class="stack icon-paper-plane" onclick="postQuest()">
+        Send
+    </button>
+</div>
+<p>Or you can center them:</p>
+<div class="flex two three-600 six-1200 demo">
+    <div><span style="color: #B9DBFF;font-size: xx-large" >1</span></div>
+    <div><span>2</span></div>
+    <div><span>3</span></div>
+    <div><span>4</span></div>
+    <div><span>5</span></div>
+    <div><span>6</span></div>
+</div>
+<p></p>
+<div style="text-align: center;height: 100%">
+    <table class="primary">
+        <thead>
+        <tr>
+            <th>书名</th>
+            <th>出版日期</th>
+        </tr>
+        </thead>
+        <tbody id="bookItemResult">
+        </tbody>
+    </table>
+</div>
+<div style="bottom: auto">
+
+</div>
+
 </body>
+<script>
+    function postQuest() {
+        var movieName = document.getElementById('movieName').value;
+        if (movieName == '') {
+            alert("请输入！！！")
+            return;
+        }
+        var data = JSON.stringify({"name": movieName, "year": "2025"});
+        $.ajax({
+            url: "/getBook",
+            contentType: "application/json",
+            data: data,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                showData(data);
+            }
+        })
+    }
+
+    function showData(data) {
+        var str = '';
+        var bookList = data.bookList;
+        for (var i in bookList) {
+            str += '<tr><td>' + bookList[i].name + '</td><td>' + bookList[i].year + '</td></tr>';
+        }
+        $("#bookItemResult").append(str);
+    }
+</script>
 </html>

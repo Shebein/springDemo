@@ -1,13 +1,18 @@
 package org.example.lury;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
+@Controller
+@Log4j2
 public class ApplicationController {
 
-    @GetMapping("/getDocument")
-    public String test(@RequestBody Object testDTO) {
+    @RequestMapping(value = "/getDocument", method = RequestMethod.GET)
+    public String test() {
+        log.info("===================================");
         return "/documentation.html";
     }
+
+
 }
