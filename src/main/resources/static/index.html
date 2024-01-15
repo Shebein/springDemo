@@ -9,26 +9,29 @@
 </head>
 <body>
 <a class="pseudo button" href="/documentation.html" target="_blank"><h3>css 样式指南</h3></a>
-
-<div class="flex two">
-    <div>
-        <article class="card">
-            <img src="/img/forest.jpg">
-            <footer>
-                <h3>Misty Forest</h3>
-                <button>Like</button>
-            </footer>
-        </article>
+<div class="tabs four">
+    <input id="tabC-1" type='radio' name='tabGroupC' checked >
+    <input id="tabC-2" type='radio' name='tabGroupC'>
+    <input id="tabC-3" type='radio' name='tabGroupC'>
+    <input id="tabC-4" type='radio' name='tabGroupC'>
+    <div class='row'>
+        <div>
+            <img src="img/forest.jpg">
+        </div>
+        <div>
+            <img src="img/lake.jpg">
+        </div>
+        <div>
+            <img src="img/halong.jpg">
+        </div>
+        <div>
+            <img src="img/balloon.jpg">
+        </div>
     </div>
-    <div>
-        <article class="card">
-            <img src="/img/forest.jpg">
-            <footer>
-                <h3>Misty Forest</h3>
-                <button>Like</button>
-            </footer>
-        </article>
-    </div>
+    <label for="tabC-1"><img src="img/forest.jpg"></label>
+    <label for="tabC-2"><img src="img/lake.jpg"></label>
+    <label for="tabC-3"><img src="img/halong.jpg"></label>
+    <label for="tabC-4"><img src="img/balloon.jpg"></label>
 </div>
 <div class="third">
     <input class="stack" placeholder="Name" id="movieName"/>
@@ -36,15 +39,6 @@
     <button class="stack icon-paper-plane" onclick="postQuest()">
         Send
     </button>
-</div>
-<p>Or you can center them:</p>
-<div class="flex two three-600 six-1200 demo">
-    <div><span style="color: #B9DBFF;font-size: xx-large" >1</span></div>
-    <div><span>2</span></div>
-    <div><span>3</span></div>
-    <div><span>4</span></div>
-    <div><span>5</span></div>
-    <div><span>6</span></div>
 </div>
 <p></p>
 <div style="text-align: center;height: 100%">

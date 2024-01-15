@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 public class BookItem {
+
+    private String isbnCode;
     private String itemName;
     private String itemDesc;
     private List<Book> bookList = new ArrayList<>();
@@ -12,6 +14,14 @@ public class BookItem {
     private Date updTm;
     private String crtr;
     private String updtr;
+
+    public String getIsbnCode() {
+        return isbnCode;
+    }
+
+    public void setIsbnCode(String isbnCode) {
+        this.isbnCode = isbnCode;
+    }
 
     public String getItemName() {
         return itemName;
