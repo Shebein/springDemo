@@ -1,5 +1,7 @@
 package org.example.lury.entity;
 
+import org.example.lury.generator.domain.Book;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

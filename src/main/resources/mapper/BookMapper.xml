@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.lury.generator.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.lury.generator.domain.Book">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="cnDesc" column="cn_desc" jdbcType="VARCHAR"/>
+            <result property="enDesc" column="en_desc" jdbcType="VARCHAR"/>
+            <result property="fornF" column="forn_f" jdbcType="VARCHAR"/>
+            <result property="isbnCd" column="isbn_cd" jdbcType="VARCHAR"/>
+            <result property="ctgrId" column="ctgr_id" jdbcType="INTEGER"/>
+            <result property="crtr" column="crtr" jdbcType="VARCHAR"/>
+            <result property="crtTm" column="crt_tm" jdbcType="TIMESTAMP"/>
+            <result property="updtr" column="updtr" jdbcType="VARCHAR"/>
+            <result property="updTm" column="upd_tm" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,cn_desc,
+        en_desc,forn_f,isbn_cd,
+        ctgr_id,crtr,crt_tm,
+        updtr,upd_tm
+    </sql>
+</mapper>

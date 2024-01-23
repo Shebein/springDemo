@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("org.example.lury.generator.mapper")
 public class SpringbootDemoApplication {
 
     public static void main(String[] args) {

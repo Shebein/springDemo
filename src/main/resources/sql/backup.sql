@@ -1,6 +1,6 @@
 create table book
 (
-    id      int(10) not null primary key comment 'ID',
+    id      int(10) not null AUTO_INCREMENT primary key comment 'ID',
     name    varchar(20) comment '书本名称',
     cn_desc varchar(1000) comment '中文描述',
     en_desc varchar(1000) comment '英文文描述',
@@ -12,6 +12,8 @@ create table book
     updtr   varchar(20),
     upd_tm  timestamp
 ) engine = 'innodb' default charset = 'utf8';
+
+drop table book;
 
 show
 tables ;

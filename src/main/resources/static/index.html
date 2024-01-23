@@ -39,6 +39,10 @@
     <button class="stack icon-paper-plane" onclick="postQuest()">
         Send
     </button>
+
+    <button class="stack icon-paper-plane" onclick="insertBook()">
+        testInsert
+    </button>
 </div>
 <p></p>
 <div style="text-align: center;height: 100%">
@@ -46,7 +50,7 @@
         <thead>
         <tr>
             <th>书名</th>
-            <th>出版日期</th>
+            <th>ISBN代码</th>
         </tr>
         </thead>
         <tbody id="bookItemResult">
@@ -82,9 +86,23 @@
         var str = '';
         var bookList = data.bookList;
         for (var i in bookList) {
-            str += '<tr><td>' + bookList[i].name + '</td><td>' + bookList[i].year + '</td></tr>';
+            str += '<tr><td>' + bookList[i].name + '</td><td>' + bookList[i].isbnCd + '</td></tr>';
         }
         $("#bookItemResult").append(str);
+    }
+
+    function insertBook() {
+        var data = JSON.stringify({"name": "jjjj", "year": "2025"});
+        $.ajax({
+            url: "/insertBook",
+            contentType: "application/json",
+            data: data,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                window.alert(data);
+            }
+        })
     }
 </script>
 </html>
