@@ -5,3 +5,6 @@ spring:
     username: admin
     password: admin
     url: jdbc:mysql://127.0.0.1:3306/lemon?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+
+logging:
+  config: classpath:log4j2.xml
